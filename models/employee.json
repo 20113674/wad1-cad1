@@ -1,0 +1,31 @@
+{
+  "employees": [
+    {
+      "name": "Samsung",
+      "fullname": "Samsung Galaxy S26 Ultra",
+      "image": "/download.jpg",
+      "joined": 2026,
+      "job": "Most Expensive Phone in the World of 2026",
+      "city": "South Korea",
+      "mates": 41
+    },
+    {
+      "name": "Apple",
+      "fullname": "Apple iPhone 17 Pro Max",
+      "image": "/iphone17.jpg",
+      "joined": 2025,
+      "job": "Best Camera Phone of 2025",
+      "city": "United States",
+      "mates": 28
+    },
+    {
+      "name": "Oppo",
+      "fullname": "Oppo Find X8 Pro",
+      "image": "/oppo.jpg",
+      "joined": 2024,
+      "job": "Best Value Flagship Phone",
+      "city": "China",
+      "mates": 19
+    }
+  ]
+}

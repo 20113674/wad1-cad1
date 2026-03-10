@@ -1,0 +1,88 @@
+{
+  "playlistCollection": [
+    {
+      "id": "01",
+      "title": "Best Flagship Phones",
+      "songs": [
+        {
+          "id": "04",
+          "title": "Samsung Galaxy S25 Ultra",
+          "artist": "Samsung"
+        },
+        {
+          "id": "05",
+          "title": "iPhone 16 Pro Max",
+          "artist": "Apple"
+        },
+        {
+          "id": "06",
+          "title": "Google Pixel 9 Pro",
+          "artist": "Google"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Best Camera Phones",
+      "songs": [
+        {
+          "id": "07",
+          "title": "iPhone 16 Pro Max",
+          "artist": "Apple"
+        },
+        {
+          "id": "08",
+          "title": "Samsung Galaxy S25 Ultra",
+          "artist": "Samsung"
+        },
+        {
+          "id": "09",
+          "title": "Google Pixel 9 Pro",
+          "artist": "Google"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Best Battery Life",
+      "songs": [
+        {
+          "id": "10",
+          "title": "Samsung Galaxy S25+",
+          "artist": "Samsung"
+        },
+        {
+          "id": "11",
+          "title": "OnePlus 13",
+          "artist": "OnePlus"
+        },
+        {
+          "id": "12",
+          "title": "Motorola Edge 50 Ultra",
+          "artist": "Motorola"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Best Performance Phones",
+      "songs": [
+        {
+          "id": "13",
+          "title": "iPhone 16 Pro Max",
+          "artist": "Apple"
+        },
+        {
+          "id": "14",
+          "title": "Samsung Galaxy S25 Ultra",
+          "artist": "Samsung"
+        },
+        {
+          "id": "15",
+          "title": "OnePlus 13",
+          "artist": "OnePlus"
+        }
+      ]
+    }
+  ]
+}
