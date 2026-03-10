@@ -10,5 +10,108 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: lightgrey;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+}
+
+.ui.stackable.menu {
+  background-color: #111111;
+  border-bottom: 3px solid #00c853;
+  border-radius: 0;
+}
+
+.ui.stackable.menu .header.item a {
+  color: #00c853;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ui.stackable.menu .item {
+  color: #cccccc;
+}
+
+.ui.stackable.menu .item:hover,
+.ui.stackable.menu .item.active {
+  background-color: #00c853;
+  color: #000000;
+}
+
+.ui.segment {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #e0e0e0;
+}
+
+.ui.card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #e0e0e0;
+}
+
+.ui.card .header {
+  color: #00c853;
+}
+
+.ui.card .meta,
+.ui.card .description {
+  color: #aaaaaa;
+}
+
+.ui.card .extra {
+  background-color: #111111;
+  border-top: 1px solid #2a2a2a;
+  color: #aaaaaa;
+}
+
+h2, h3 {
+  color: #00c853;
+}
+
+.ui.table {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #2a2a2a;
+}
+
+.ui.table thead th {
+  background-color: #00c853;
+  color: #000000;
+}
+
+.ui.table tbody tr:hover {
+  background-color: #003300;
+}
+
+.ui.table td, .ui.table th {
+  border-color: #2a2a2a;
+}
+
+.ui.statistics .statistic .value {
+  color: #00c853;
+}
+
+.ui.statistics .statistic .label {
+  color: #aaaaaa;
+}
+
+.folder.icon {
+  color: #00c853;
+  font-size: 1.4em;
+}
+
+.ui.message {
+  background-color: #111111;
+  color: #00c853;
+  border: 1px solid #00c853;
+}
+
+a {
+  color: #00c853;
+}
+
+a:hover {
+  color: #32e;
+}
+.ui.segment h3 {
+    color: #ff0000;
 }

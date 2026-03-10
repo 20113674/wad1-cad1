@@ -1,9 +1,17 @@
 {
   "info": {
-    "message": 
-      "The app-store.json and app-store.js files can be expanded to store some facts about the app e.g. the app's creators. You should also add your own store (equivalent to our playlist-store.json). See the assignment spec for more details.",
+    "appTitle": "Phone Tracker",
+    "version": 1.0,
     "creators": [
-      
-    ]
+      {
+        "name": "Rubik",
+        "role": "Web Developer"
+      },
+      {
+        "name": "A.N. Other",
+        "role": "Web Developer"
+      }
+    ],
+    "location": "Waterford"
   }
 }

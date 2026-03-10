@@ -6,13 +6,14 @@ import appStore from "../models/app-store.js";
 const start = {
   createView(request, response) {
     logger.info("Start page loading!");
-    
+
     const viewData = {
-      title: "CA1 Starter App",
+      title: "Welcome to the Phone Ranking Information !",
       info: appStore.getAppInfo()
     };
-    
-    response.render('start', viewData);   
+
+    //logger.debug(viewData);
+    response.render('start', viewData);
   },
 };
 
