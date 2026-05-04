@@ -15,7 +15,7 @@
                 <select class="ui dropdown" name="sort" onchange="this.form.submit()">
                     <option value="">-- none --</option>
                     <option value="title" {{#if titleSelected}}selected{{/if}}>Title (A–Z)</option>
-                    <option value="count" {{#if countSelected}}selected{{/if}}>Phone Count</option>
+                    <option value="rating" {{#if ratingSelected}}selected{{/if}}>Rating</option>
                 </select>
             </div>
             <div class="field">
@@ -47,21 +47,33 @@
                     </div>
                 {{/if}}
                 <div class="content">
-                    <div class="header">{{title}}</div>
-                    <div class="description">
+                    <a class="header">{{title}}</a>
+                    <p>
                         <i class="mobile alternate icon"></i>
-                        {{phones.length}} phone(s)
-                    </div>
+                        {{#if phones}}
+                            Total phones: {{phones.length}}
+                        {{else}}
+                            Empty category!
+                        {{/if}}
+                    </p>
+                    {{#if rating}}
+                        <p>
+              <span
+                      class="ui yellow disabled rating"
+                      data-icon="star"
+                      data-rating="{{rating}}"
+                      data-max-rating="5">
+              </span>
+                        </p>
+                    {{/if}}
                 </div>
                 <div class="extra content">
                     <a href="/playlist/{{id}}">
-                        <i class="folder open outline icon"></i> View
+                        <i class="ui open folder outline black icon"></i>
                     </a>
-                    &nbsp;&nbsp;
                     <a href="/dashboard/deleteplaylist/{{id}}"
-                       onclick="return confirm('Delete this category?')"
-                       style="color: red;">
-                        <i class="trash icon"></i> Delete
+                       onclick="return confirm('Delete this category?')">
+                        <i class="ui black trash icon"></i>
                     </a>
                 </div>
             </div>

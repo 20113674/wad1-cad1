@@ -2,15 +2,19 @@
     <h4 class="ui header">
         <i class="plus icon"></i> Add New Category
     </h4>
-    <div class="two fields">
+    <div class="three fields">
         <div class="field">
             <label>Category Title</label>
-            <input type="text" name="title" placeholder="e.g. Best Camera Phones" required autofocus>
+            <input type="text" name="title" placeholder="Title" required autofocus>
+        </div>
+        <div class="field">
+            <label>Rating</label>
+            <input type="number" name="rating" placeholder="Rating" min="1" max="5" required>
         </div>
         <div class="field">
             <label>Category Image <small>(optional)</small></label>
             <input type="file" name="picture" accept="image/*">
         </div>
     </div>
-    <button class="ui blue button" type="submit">Add Category</button>
+    <button class="ui blue submit button">Add Category</button>
 </form>

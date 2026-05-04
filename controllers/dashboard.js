@@ -27,24 +27,22 @@ const dashboard = {
                 if (sortField === 'title') {
                     return a.title.localeCompare(b.title) * order;
                 }
-                if (sortField === 'count') {
-                    return (a.phones.length - b.phones.length) * order;
+                if (sortField === 'rating') {
+                    return (a.rating - b.rating) * order;
                 }
                 return 0;
             });
         }
-
         const viewData = {
             title: 'Phones Dashboard',
             fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
             playlists: sorted,
             search: searchTerm,
             titleSelected: request.query.sort === 'title',
-            countSelected: request.query.sort === 'count',
-            ascSelected: request.query.order !== 'desc',
+            ratingSelected: request.query.sort === 'rating',
+            ascSelected: request.query.order === 'asc',
             descSelected: request.query.order === 'desc',
         };
-
         response.render('dashboard', viewData);
     },
 
@@ -57,6 +55,7 @@ const dashboard = {
                 id: uuidv4(),
                 userid: loggedInUser.id,
                 title: request.body.title,
+                rating: parseInt(request.body.rating),
                 phones: [],
             };
 
