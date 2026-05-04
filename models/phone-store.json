@@ -1,102 +1,6 @@
 {
   "phoneCollection": [
     {
-      "id": "e63dcadf-f30d-4653-b07c-22d8b2c6c1e0",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "best babe",
-      "phones": [
-        {
-          "id": "8c5239ab-e972-42ea-a0b4-ffb30b80c415",
-          "title": "66",
-          "brand": "666",
-          "price": "66667"
-        },
-        {
-          "id": "82e1de9e-ef62-4232-9f87-4941cf98ccbe",
-          "title": "iphone 5",
-          "brand": "samd",
-          "price": "1222"
-        }
-      ]
-    },
-    {
-      "id": "94567a90-9a06-4ba8-9788-0f442f62190c",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "hola",
-      "phones": []
-    },
-    {
-      "id": "9f82ea6b-07e7-4cf7-bcd1-3a88dfb19e14",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "rf",
-      "phones": [
-        {
-          "id": "5632baf5-06b3-4267-8fe6-45dfb8d8bd05",
-          "title": "44",
-          "brand": "tt",
-          "price": "tt"
-        }
-      ]
-    },
-    {
-      "id": "1ee2179e-962a-4f6f-948d-ac454a784fd7",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "hoho",
-      "phones": [
-        {
-          "id": "d9e666ca-bfe5-4cdd-8eb9-c341b3fa8f6c",
-          "title": "ggg",
-          "brand": "gggggggggg",
-          "price": "gggggggggggggg"
-        }
-      ]
-    },
-    {
-      "id": "7cc106a5-5ee9-418c-b5ee-5f5e8bee9136",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "55",
-      "phones": []
-    },
-    {
-      "id": "dcf38387-ac70-4ec2-a9df-1dcf5db412e3",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "ddd",
-      "phones": [
-        {
-          "id": "290f3492-9bf1-44a5-a460-9d7981bac0c4",
-          "title": "dd",
-          "brand": "dd",
-          "price": "dd"
-        }
-      ]
-    },
-    {
-      "id": "6557f97d-d8e8-4fb5-a333-bb6b21e59c57",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "5t",
-      "phones": [
-        {
-          "id": "64bc6278-00d3-45d1-a343-2a7edb4b143b",
-          "title": "tt",
-          "brand": "tt",
-          "price": "tt"
-        }
-      ]
-    },
-    {
-      "id": "4587d580-aab2-4312-acbf-5ad0f9974bad",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "55",
-      "phones": [
-        {
-          "id": "5fdc5c58-1a12-4f51-847b-b67d0f77b7b4",
-          "title": "67",
-          "brand": "45",
-          "price": "35"
-        }
-      ]
-    },
-    {
       "id": "8449597d-88e5-4fc0-a043-e4ff211d9afc",
       "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
       "title": "hoey",
@@ -111,6 +15,16 @@
       "picture": {
         "url": "https://res.cloudinary.com/dojl3kyhj/image/upload/v1777894151/cfapxkjnvljxm7flfhs4.jpg",
         "public_id": "cfapxkjnvljxm7flfhs4"
+      }
+    },
+    {
+      "id": "a0b80a60-c0cb-41f4-a9e5-1d3839340b1c",
+      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
+      "title": "best setup",
+      "phones": [],
+      "picture": {
+        "url": "https://res.cloudinary.com/dojl3kyhj/image/upload/v1777918141/gr2gpwpa8ybhmsxi6qz9.jpg",
+        "public_id": "gr2gpwpa8ybhmsxi6qz9"
       }
     }
   ]
