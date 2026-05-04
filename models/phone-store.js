@@ -29,16 +29,37 @@ const phoneStore = {
         );
     },
 
-    async addPlaylist(playlist) {
+    async addPlaylist(playlist, file) {
+        if (file) {
+            try {
+                playlist.picture = await this.store.addToCloudinary(file);
+            } catch (err) {
+                logger.warn('Cloudinary upload failed, saving without image: ' + err);
+            }
+        }
         await this.store.addCollection(this.collection, playlist);
     },
 
     async removePlaylist(id) {
         const cat = this.getPlaylist(id);
+        if (cat && cat.picture && cat.picture.public_id) {
+            try {
+                await this.store.deleteFromCloudinary(cat.picture.public_id);
+            } catch (err) {
+                logger.error('Cloudinary delete failed: ' + err);
+            }
+        }
         if (cat) await this.store.removeCollection(this.collection, cat);
     },
 
-    async addPhone(categoryId, phone) {
+    async addPhone(categoryId, phone, file) {
+        if (file) {
+            try {
+                phone.img = await this.store.addToCloudinary(file);
+            } catch (err) {
+                logger.warn('Cloudinary upload failed, saving without image: ' + err);
+            }
+        }
         await this.store.addItem(this.collection, categoryId, this.array, phone);
     },
 

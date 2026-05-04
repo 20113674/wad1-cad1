@@ -23,37 +23,52 @@ const category = {
     },
 
     async addPhone(request, response) {
-        const categoryId = request.params.id;
-        const newPhone = {
-            id: uuidv4(),
-            title: request.body.title,
-            brand: request.body.brand,
-            price: request.body.price,
-        };
-        await phoneStore.addPhone(categoryId, newPhone);
-        logger.info('Added phone: ' + newPhone.title);
-        response.redirect('/playlist/' + categoryId);
+        try {
+            const categoryId = request.params.id;
+            const newPhone = {
+                id: uuidv4(),
+                title: request.body.title,
+                brand: request.body.brand,
+                price: request.body.price,
+            };
+            const file = request.files && request.files.phoneImg ? request.files.phoneImg : null;
+            await phoneStore.addPhone(categoryId, newPhone, file);
+            logger.info('Added phone: ' + newPhone.title);
+            response.redirect('/playlist/' + categoryId);
+        } catch (err) {
+            logger.error('Error adding phone: ' + err);
+            response.redirect('/dashboard');
+        }
     },
 
     async deletePhone(request, response) {
-        const categoryId = request.params.id;
-        const phoneId = request.params.phoneid;
-        logger.debug('Deleting phone ' + phoneId);
-        await phoneStore.removePhone(categoryId, phoneId);
-        response.redirect('/playlist/' + categoryId);
+        try {
+            const categoryId = request.params.id;
+            const phoneId = request.params.phoneid;
+            await phoneStore.removePhone(categoryId, phoneId);
+            response.redirect('/playlist/' + categoryId);
+        } catch (err) {
+            logger.error('Error deleting phone: ' + err);
+            response.redirect('/dashboard');
+        }
     },
 
     async updatePhone(request, response) {
-        const categoryId = request.params.id;
-        const phoneId = request.params.phoneid;
-        const updatedPhone = {
-            id: phoneId,
-            title: request.body.title,
-            brand: request.body.brand,
-            price: request.body.price,
-        };
-        await phoneStore.editPhone(categoryId, phoneId, updatedPhone);
-        response.redirect('/playlist/' + categoryId);
+        try {
+            const categoryId = request.params.id;
+            const phoneId = request.params.phoneid;
+            const updatedPhone = {
+                id: phoneId,
+                title: request.body.title,
+                brand: request.body.brand,
+                price: request.body.price,
+            };
+            await phoneStore.editPhone(categoryId, phoneId, updatedPhone);
+            response.redirect('/playlist/' + categoryId);
+        } catch (err) {
+            logger.error('Error updating phone: ' + err);
+            response.redirect('/dashboard');
+        }
     },
 };
 

@@ -4,7 +4,7 @@
   "description": "Phone Tracker CA2",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js --ext js,hbs"
   },
   "engines": {
     "node": ">=22.22.2"

@@ -49,19 +49,25 @@ const dashboard = {
     },
 
     async addPlaylist(request, response) {
-        const loggedInUser = accounts.getCurrentUser(request);
-        if (!loggedInUser) return response.redirect('/');
+        try {
+            const loggedInUser = accounts.getCurrentUser(request);
+            if (!loggedInUser) return response.redirect('/');
 
-        const newPlaylist = {
-            id: uuidv4(),
-            userid: loggedInUser.id,
-            title: request.body.title,
-            phones: [],
-        };
+            const newPlaylist = {
+                id: uuidv4(),
+                userid: loggedInUser.id,
+                title: request.body.title,
+                phones: [],
+            };
 
-        await phoneStore.addPlaylist(newPlaylist);
-        logger.info('Added category: ' + newPlaylist.title);
-        response.redirect('/dashboard');
+            const file = request.files && request.files.picture ? request.files.picture : null;
+            await phoneStore.addPlaylist(newPlaylist, file);
+            logger.info('Added category: ' + newPlaylist.title);
+            response.redirect('/dashboard');
+        } catch (err) {
+            logger.error('Error adding category: ' + err);
+            response.redirect('/dashboard');
+        }
     },
 
     async deletePlaylist(request, response) {

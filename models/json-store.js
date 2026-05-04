@@ -2,12 +2,12 @@
 
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
-import dotenv from 'dotenv';
-import logger from '../utils/logger.js';
 import { v2 as cloudinary } from 'cloudinary';
+import { config } from 'dotenv';
+import logger from '../utils/logger.js';
 import fs from 'fs/promises';
 
-dotenv.config();
+config();
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -80,17 +80,24 @@ class JsonStore {
   }
 
   async addToCloudinary(file) {
-    const result = await cloudinary.uploader.upload(file.tempFilePath);
-    logger.info('Cloudinary upload: ' + result.secure_url);
+    logger.info('Cloudinary upload starting... file: ' + file.name);
+    logger.info('Cloud name is: ' + process.env.CLOUDINARY_CLOUD_NAME);
     try {
-      await fs.unlink(file.tempFilePath);
+      const result = await cloudinary.uploader.upload(file.tempFilePath);
+      logger.info('Cloudinary upload SUCCESS: ' + result.secure_url);
+      try {
+        await fs.unlink(file.tempFilePath);
+      } catch (err) {
+        logger.warn('Temp file delete failed: ' + err);
+      }
+      return {
+        url: result.secure_url,
+        public_id: result.public_id,
+      };
     } catch (err) {
-      logger.warn('Temp file delete failed: ' + err);
+      logger.error('Cloudinary upload FAILED: ' + JSON.stringify(err));
+      throw err;
     }
-    return {
-      url: result.secure_url,
-      public_id: result.public_id,
-    };
   }
 }
 

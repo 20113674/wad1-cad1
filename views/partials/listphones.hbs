@@ -2,6 +2,7 @@
     <table class="ui unstackable striped table">
         <thead>
         <tr>
+            <th>Image</th>
             <th>Phone</th>
             <th>Brand</th>
             <th>Price</th>
@@ -12,6 +13,13 @@
         <tbody>
         {{#each phones}}
             <tr id="phone{{@index}}">
+                <td>
+                    {{#if img}}
+                        <img src="{{img.url}}" style="width:50px; height:50px; object-fit:cover; border-radius:4px;">
+                    {{else}}
+                        <i class="mobile alternate icon"></i>
+                    {{/if}}
+                </td>
                 <td>{{title}}</td>
                 <td>{{brand}}</td>
                 <td>{{price}}</td>
@@ -30,7 +38,7 @@
             </tr>
 
             <tr class="hide" id="edit{{@index}}">
-                <td colspan="5">
+                <td colspan="6">
                     <form method="POST" action="/playlist/{{../id}}/updatephone/{{id}}">
                         <div class="ui inline fields">
                             <div class="field">

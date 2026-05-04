@@ -38,20 +38,34 @@
         </div>
     {{/unless}}
 
-    {{#each playlists}}
-        <section class="ui left aligned segment">
-            <h3 class="ui header">{{title}}</h3>
-            <p>Total phones: {{phones.length}}</p>
-            <a href="/playlist/{{id}}">
-                <i class="folder open outline icon"></i> View
-            </a>
-            &nbsp;&nbsp;
-            <a href="/dashboard/deleteplaylist/{{id}}"
-               onclick="return confirm('Delete this category?')"
-               style="color: #ffffff;">
-                <i class="trash icon"></i> Delete
-            </a>
-        </section>
-    {{/each}}
+    <div class="ui centered cards">
+        {{#each playlists}}
+            <div class="ui card">
+                {{#if picture}}
+                    <div class="image">
+                        <img src="{{picture.url}}" alt="{{title}}">
+                    </div>
+                {{/if}}
+                <div class="content">
+                    <div class="header">{{title}}</div>
+                    <div class="description">
+                        <i class="mobile alternate icon"></i>
+                        {{phones.length}} phone(s)
+                    </div>
+                </div>
+                <div class="extra content">
+                    <a href="/playlist/{{id}}">
+                        <i class="folder open outline icon"></i> View
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="/dashboard/deleteplaylist/{{id}}"
+                       onclick="return confirm('Delete this category?')"
+                       style="color: red;">
+                        <i class="trash icon"></i> Delete
+                    </a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
 
 </section>

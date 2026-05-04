@@ -27,6 +27,13 @@
       "email": "ashotgrigoryancarrick@gmail.com",
       "password": "11111",
       "id": "dc8d1b2b-b4b7-482f-9495-911878564561"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "12345",
+      "id": "ba3488d2-2d8a-4f38-b229-54483689404c"
     }
   ]
 }
