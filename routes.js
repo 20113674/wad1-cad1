@@ -9,6 +9,7 @@ import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import aboutme from './controllers/aboutme.js';
 import category from './controllers/category.js';
+import stats from './controllers/stats.js';
 
 // Auth routes
 router.get('/', accounts.index);
@@ -24,6 +25,7 @@ router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
 router.get('/aboutme', aboutme.createView);
 router.get('/playlist/:id', category.createView);
+router.get('/stats', stats.createView);
 
 // Dashboard add/delete category
 router.post('/dashboard/addplaylist', dashboard.addPlaylist);

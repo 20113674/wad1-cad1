@@ -1,0 +1,82 @@
+{{> menu id="stats"}}
+
+<section class="ui center aligned segment">
+    <h2 class="ui header">
+        <i class="chart bar icon"></i> Phone Tracker Statistics
+    </h2>
+
+    {{#with stats}}
+
+        <h3 class="ui dividing header">🌍 Global Stats</h3>
+
+        <div class="ui three statistics" style="margin-bottom:1.5em;">
+            <div class="ui blue statistic">
+                <div class="value">{{totalCategories}}</div>
+                <div class="label">Total Categories</div>
+            </div>
+            <div class="ui teal statistic">
+                <div class="value">{{totalPhones}}</div>
+                <div class="label">Total Phones</div>
+            </div>
+            <div class="ui green statistic">
+                <div class="value">{{totalUsers}}</div>
+                <div class="label">Registered Users</div>
+            </div>
+        </div>
+
+        <div class="ui two statistics" style="margin-bottom:1.5em;">
+            <div class="ui orange statistic">
+                <div class="value">{{avgPhones}}</div>
+                <div class="label">Avg Phones per Category</div>
+            </div>
+            <div class="ui red statistic">
+                <div class="value">{{maxPhones}}</div>
+                <div class="label">Most Phones in One Category</div>
+            </div>
+        </div>
+
+        {{#if largestCategories}}
+            <div class="ui info message">
+                <strong>Largest category:</strong>
+                <ul>
+                    {{#each largestCategories}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        {{#if topUsers}}
+            <div class="ui success message">
+                <strong>User with most categories:</strong>
+                <ul>
+                    {{#each topUsers}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+        <h3 class="ui dividing header">👤 Your Stats</h3>
+
+        <div class="ui four statistics">
+            <div class="ui purple statistic">
+                <div class="value">{{myCategories}}</div>
+                <div class="label">My Categories</div>
+            </div>
+            <div class="ui violet statistic">
+                <div class="value">{{myPhoneCount}}</div>
+                <div class="label">My Phones</div>
+            </div>
+            <div class="ui pink statistic">
+                <div class="value">{{myAvg}}</div>
+                <div class="label">Avg Phones / Category</div>
+            </div>
+            <div class="ui brown statistic">
+                <div class="value">{{myMax}}</div>
+                <div class="label">Max in One Category</div>
+            </div>
+        </div>
+
+    {{/with}}
+</section>
