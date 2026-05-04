@@ -1,26 +1,31 @@
 {
-  "name": "ca1-app",
-  "version": "1.0.0",
-  "description": "CA1 starter app",
-  "type": "module",
+  "name": "ca1-phones",
+  "version": "2.0.0",
+  "description": "Phone Tracker CA2",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "Nathan",
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "keywords": ["node", "express"],
+  "author": "Rubik",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
     "express-handlebars": "^8.0.6",
     "lowdb": "^7.0.1",
+    "uuid": "^14.0.0",
     "winston": "^3.19.0"
   },
   "devDependencies": {
+    "dotenv": "^17.4.2",
     "nodemon": "^3.1.11"
   }
 }
