@@ -1,0 +1,57 @@
+<section class="ui left aligned middle aligned segment">
+
+    <h2 class="ui header">My Phone Categories</h2>
+
+    <form action="/dashboard" method="GET" class="ui form" style="margin-bottom: 1em;">
+        <div class="ui inline fields">
+            <div class="field">
+                <div class="ui icon input">
+                    <input type="text" name="searchTerm" placeholder="Search by title..." value="{{search}}">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+            <div class="field">
+                <label>Sort by:</label>
+                <select class="ui dropdown" name="sort" onchange="this.form.submit()">
+                    <option value="">-- none --</option>
+                    <option value="title" {{#if titleSelected}}selected{{/if}}>Title (A–Z)</option>
+                    <option value="count" {{#if countSelected}}selected{{/if}}>Phone Count</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Order:</label>
+                <select class="ui dropdown" name="order" onchange="this.form.submit()">
+                    <option value="asc"  {{#if ascSelected}}selected{{/if}}>↑ Asc</option>
+                    <option value="desc" {{#if descSelected}}selected{{/if}}>↓ Desc</option>
+                </select>
+            </div>
+            <div class="field">
+                <button class="ui blue button" type="submit">Search</button>
+                <a class="ui button" href="/dashboard">Clear</a>
+            </div>
+        </div>
+    </form>
+
+    {{#unless playlists}}
+        <div class="ui info message">
+            No categories yet — add one below!
+        </div>
+    {{/unless}}
+
+    {{#each playlists}}
+        <section class="ui left aligned segment">
+            <h3 class="ui header">{{title}}</h3>
+            <p>Total phones: {{phones.length}}</p>
+            <a href="/playlist/{{id}}">
+                <i class="folder open outline icon"></i> View
+            </a>
+            &nbsp;&nbsp;
+            <a href="/dashboard/deleteplaylist/{{id}}"
+               onclick="return confirm('Delete this category?')"
+               style="color: red;">
+                <i class="trash icon"></i> Delete
+            </a>
+        </section>
+    {{/each}}
+
+</section>

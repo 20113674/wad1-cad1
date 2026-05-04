@@ -1,30 +1,24 @@
 'use strict';
 
-import express from 'express';
-const router = express.Router();
+import logger from '../utils/logger.js';
+import appStore from '../models/app-store.js';
+import accounts from './accounts.js';
 
-import accounts from './controllers/accounts.js';
-import start from './controllers/start.js';
-import dashboard from './controllers/dashboard.js';
-import about from './controllers/about.js';
-import aboutme from './controllers/aboutme.js';
-import category from './controllers/category.js';
+const aboutme = {
+    createView(request, response) {
+        logger.info('About Me page loading!');
 
-// Auth routes
-router.get('/', accounts.index);
-router.get('/login', accounts.login);
-router.get('/signup', accounts.signup);
-router.get('/logout', accounts.logout);
-router.post('/register', accounts.register);
-router.post('/authenticate', accounts.authenticate);
+        const loggedInUser = accounts.getCurrentUser(request);
+        if (!loggedInUser) return response.redirect('/');
 
-// App routes
-router.get('/start', start.createView);
-router.get('/dashboard', dashboard.createView);
-router.get('/about', about.createView);
-router.get('/aboutme', aboutme.createView);
-router.get('/playlist/:id', category.createView);
+        const viewData = {
+            title: 'About Me',
+            fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+            info: appStore.getAppInfo(),
+        };
 
-router.get('/error', (req, res) => res.status(404).end('Page not found.'));
+        response.render('aboutme', viewData);
+    },
+};
 
-export default router;
+export default aboutme;

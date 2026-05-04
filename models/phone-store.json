@@ -1,88 +1,22 @@
 {
   "phoneCollection": [
     {
-      "id": "01",
-      "title": "Best Flagship Phones",
-      "phones": [
-        {
-          "id": "04",
-          "title": "Samsung Galaxy S25 Ultra",
-          "brand": "Samsung"
-        },
-        {
-          "id": "05",
-          "title": "iPhone 16 Pro Max",
-          "brand": "Apple"
-        },
-        {
-          "id": "06",
-          "title": "Google Pixel 9 Pro",
-          "brand": "Google"
-        }
-      ]
+      "id": "974060ce-f290-44c2-86d0-1098482d06e1",
+      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
+      "title": "gg#",
+      "phones": []
     },
     {
-      "id": "02",
-      "title": "Best Camera Phones",
-      "phones": [
-        {
-          "id": "07",
-          "title": "iPhone 16 Pro Max",
-          "brand": "Apple"
-        },
-        {
-          "id": "08",
-          "title": "Samsung Galaxy S25 Ultra",
-          "brand": "Samsung"
-        },
-        {
-          "id": "09",
-          "title": "Google Pixel 9 Pro",
-          "brand": "Google"
-        }
-      ]
+      "id": "64bc8206-ca6d-4848-833e-4553035c9f1c",
+      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
+      "title": "ggg",
+      "phones": []
     },
     {
-      "id": "03",
-      "title": "Best Battery Life",
-      "phones": [
-        {
-          "id": "10",
-          "title": "Samsung Galaxy S25+",
-          "brand": "Samsung"
-        },
-        {
-          "id": "11",
-          "title": "OnePlus 13",
-          "brand": "OnePlus"
-        },
-        {
-          "id": "12",
-          "title": "Motorola Edge 50 Ultra",
-          "brand": "Motorola"
-        }
-      ]
-    },
-    {
-      "id": "04",
-      "title": "Best Performance Phones",
-      "phones": [
-        {
-          "id": "13",
-          "title": "iPhone 16 Pro Max",
-          "brand": "Apple"
-        },
-        {
-          "id": "14",
-          "title": "Samsung Galaxy S25 Ultra",
-          "brand": "Samsung"
-        },
-        {
-          "id": "15",
-          "title": "OnePlus 13",
-          "brand": "OnePlus"
-        }
-      ]
+      "id": "af2bbaba-b52f-4ace-9bb9-b61f704dd170",
+      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
+      "title": "hopa",
+      "phones": []
     }
   ]
 }
