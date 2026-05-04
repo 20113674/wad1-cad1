@@ -25,9 +25,14 @@ router.get('/about', about.createView);
 router.get('/aboutme', aboutme.createView);
 router.get('/playlist/:id', category.createView);
 
-// Dashboard add/delete
+// Dashboard add/delete category
 router.post('/dashboard/addplaylist', dashboard.addPlaylist);
 router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+
+// Phone add/edit/delete
+router.post('/playlist/:id/addphone', category.addPhone);
+router.get('/playlist/:id/deletephone/:phoneid', category.deletePhone);
+router.post('/playlist/:id/updatephone/:phoneid', category.updatePhone);
 
 router.get('/error', (req, res) => res.status(404).end('Page not found.'));
 

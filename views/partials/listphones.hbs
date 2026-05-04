@@ -1,29 +1,76 @@
-{{#if singlePlaylist.phones}}
-
+{{#if phones}}
     <table class="ui unstackable striped table">
         <thead>
         <tr>
             <th>Phone</th>
             <th>Brand</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
-        {{#each singlePlaylist.phones}}
-            <tr>
+        {{#each phones}}
+            <tr id="phone{{@index}}">
+                <td>{{title}}</td>
+                <td>{{brand}}</td>
+                <td>{{price}}</td>
                 <td>
-                    {{title}}
+                    <button id="showEdit{{@index}}" class="ui mini blue button">
+                        <i class="edit icon"></i> Edit
+                    </button>
                 </td>
                 <td>
-                    {{brand}}
+                    <a href="/playlist/{{../id}}/deletephone/{{id}}"
+                       onclick="return confirm('Delete this phone?')"
+                       class="ui mini red button">
+                        <i class="trash icon"></i> Delete
+                    </a>
                 </td>
             </tr>
+
+            <tr class="hide" id="edit{{@index}}">
+                <td colspan="5">
+                    <form method="POST" action="/playlist/{{../id}}/updatephone/{{id}}">
+                        <div class="ui inline fields">
+                            <div class="field">
+                                <input type="text" name="title" value="{{title}}" placeholder="Phone name" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="brand" value="{{brand}}" placeholder="Brand" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="price" value="{{price}}" placeholder="Price (€)">
+                            </div>
+                            <div class="field">
+                                <button type="submit" class="ui green mini button">
+                                    <i class="save icon"></i> Save
+                                </button>
+                                <button type="button" class="ui mini button" id="hideEdit{{@index}}">
+                                    <i class="undo icon"></i> Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+
+            <script>
+                document.querySelector("#showEdit{{@index}}").addEventListener('click', () => {
+                    document.querySelector("#phone{{@index}}").style.display = "none";
+                    document.querySelector("#edit{{@index}}").style.display = "table-row";
+                });
+                document.querySelector("#hideEdit{{@index}}").addEventListener('click', () => {
+                    document.querySelector("#phone{{@index}}").style.display = "table-row";
+                    document.querySelector("#edit{{@index}}").style.display = "none";
+                });
+            </script>
+
         {{/each}}
         </tbody>
     </table>
-
 {{else}}
-    <h3 class="ui message">
-        Empty category!
-    </h3>
-
+    <div class="ui info message">
+        No phones in this category yet!
+    </div>
 {{/if}}

@@ -1,8 +1,14 @@
 {{> menu}}
 
-<section class="ui center aligned middle aligned scrolling segment">
-    <h2 class="ui header">
-        {{singlePlaylist.title}}
-    </h2>
-    {{> listphones}}
-</section>
+{{#with singlePlaylist}}
+    <section class="ui center aligned segment">
+        <h2 class="ui header">
+            <i class="folder open icon"></i> {{title}}
+        </h2>
+        {{> listphones}}
+    </section>
+
+    <section class="ui segment">
+        {{> addphone}}
+    </section>
+{{/with}}

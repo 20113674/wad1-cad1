@@ -37,6 +37,18 @@ const phoneStore = {
         const cat = this.getPlaylist(id);
         if (cat) await this.store.removeCollection(this.collection, cat);
     },
+
+    async addPhone(categoryId, phone) {
+        await this.store.addItem(this.collection, categoryId, this.array, phone);
+    },
+
+    async removePhone(categoryId, phoneId) {
+        await this.store.removeItem(this.collection, categoryId, this.array, phoneId);
+    },
+
+    async editPhone(categoryId, phoneId, updatedPhone) {
+        await this.store.editItem(this.collection, categoryId, phoneId, this.array, updatedPhone);
+    },
 };
 
 export default phoneStore;

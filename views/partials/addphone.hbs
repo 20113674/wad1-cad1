@@ -1,0 +1,20 @@
+<form class="ui stacked segment form" action="/playlist/{{id}}/addphone" method="POST">
+    <h4 class="ui header">
+        <i class="plus icon"></i> Add Phone to This Category
+    </h4>
+    <div class="three fields">
+        <div class="field">
+            <label>Phone Name</label>
+            <input type="text" name="title" placeholder="e.g. iPhone 16 Pro Max" required autofocus>
+        </div>
+        <div class="field">
+            <label>Brand</label>
+            <input type="text" name="brand" placeholder="e.g. Apple" required>
+        </div>
+        <div class="field">
+            <label>Price (€)</label>
+            <input type="text" name="price" placeholder="e.g. 1299">
+        </div>
+    </div>
+    <button class="ui blue button" type="submit">Add Phone</button>
+</form>
