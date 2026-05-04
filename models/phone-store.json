@@ -1,30 +1,13 @@
 {
   "phoneCollection": [
     {
-      "id": "8449597d-88e5-4fc0-a043-e4ff211d9afc",
+      "id": "93127b45-8f09-4ba5-b56a-33455d60c4a9",
       "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "hoey",
-      "phones": [
-        {
-          "id": "1d838f87-4c23-4fd2-9161-f5282be85038",
-          "title": "hh",
-          "brand": "ujj",
-          "price": "ghg"
-        }
-      ],
-      "picture": {
-        "url": "https://res.cloudinary.com/dojl3kyhj/image/upload/v1777894151/cfapxkjnvljxm7flfhs4.jpg",
-        "public_id": "cfapxkjnvljxm7flfhs4"
-      }
-    },
-    {
-      "id": "a0b80a60-c0cb-41f4-a9e5-1d3839340b1c",
-      "userid": "31cc0332-30b2-48cc-8c5a-ae3572d4a268",
-      "title": "best setup",
+      "title": "best camera",
       "phones": [],
       "picture": {
-        "url": "https://res.cloudinary.com/dojl3kyhj/image/upload/v1777918141/gr2gpwpa8ybhmsxi6qz9.jpg",
-        "public_id": "gr2gpwpa8ybhmsxi6qz9"
+        "url": "https://res.cloudinary.com/dojl3kyhj/image/upload/v1777919057/jatb5fwqzp7ltad12n5j.jpg",
+        "public_id": "jatb5fwqzp7ltad12n5j"
       }
     }
   ]

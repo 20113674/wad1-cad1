@@ -34,6 +34,27 @@
       "email": "ashotgrigoryancarrick@gmail.com",
       "password": "12345",
       "id": "ba3488d2-2d8a-4f38-b229-54483689404c"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "252525",
+      "id": "76d172ed-f92d-4bb3-be32-bc5956def33b"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "123456",
+      "id": "b611c301-c80b-4c73-8c65-71e9b4c15ea5"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "123456",
+      "id": "e562757b-94e4-45c4-83ec-34f9f708a487"
     }
   ]
 }
