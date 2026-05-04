@@ -28,7 +28,7 @@ const dashboard = {
                     return a.title.localeCompare(b.title) * order;
                 }
                 if (sortField === 'rating') {
-                    return (a.rating - b.rating) * order;
+                    return ((a.rating || 0) - (b.rating || 0)) * order;
                 }
                 return 0;
             });
