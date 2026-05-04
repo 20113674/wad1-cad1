@@ -1,0 +1,81 @@
+{{> menu id="aboutme"}}
+
+<section class="ui center aligned middle aligned segment">
+    <h2>About Me</h2>
+    <p>
+        My name is Rubik. I am a software development student at SETU Waterford.
+        I built this app as part of my Web App Development module.
+        I have a passion for technology and combat sports.
+    </p>
+
+    <img src="starter.jpg" class="ui centered image">
+
+    <div class="ui five statistics" style="margin-top: 1em;">
+        {{#with info}}
+
+        <div class="statistic">
+            <div class="value">
+                <i class="user icon"></i>
+            </div>
+            <div class="label">
+                Name: <br>
+                {{creators.0.name}}
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="university icon"></i>
+            </div>
+            <div class="label">
+                University: <br>
+                SETU Waterford
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="map pin icon"></i>
+            </div>
+            <div class="label">
+                Location: <br>
+                {{location}}
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="mobile alternate icon"></i>
+            </div>
+            <div class="label">
+                App: <br>
+                {{appTitle}}
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="code branch icon"></i>
+            </div>
+            <div class="label">
+                Version: <br>
+                {{version}}
+            </div>
+        </div>
+
+        {{/with}}
+    </div>
+
+</section>
+
+<section class="ui center aligned middle aligned segment">
+    <h2>My Location</h2>
+    <p>Based in Waterford, Ireland.</p>
+    <iframe
+        title="Waterford Map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-7.12,52.24,-7.08,52.27&layer=mapnik&marker=52.2583,-7.1102"
+        style="border:0; width:100%; height:380px;"
+        allowfullscreen
+        loading="lazy">
+    </iframe>
+</section>

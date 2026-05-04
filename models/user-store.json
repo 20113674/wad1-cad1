@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "12345",
+      "id": "31cc0332-30b2-48cc-8c5a-ae3572d4a268"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "12345",
+      "id": "e67e19b8-e210-4373-b368-bd583f6075cd"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "12345",
+      "id": "068661fc-dce6-4ce6-9183-b53fcc3e789a"
+    },
+    {
+      "firstName": "Ruben",
+      "lastName": "Grigoryan",
+      "email": "ashotgrigoryancarrick@gmail.com",
+      "password": "11111",
+      "id": "dc8d1b2b-b4b7-482f-9495-911878564561"
+    }
+  ]
+}

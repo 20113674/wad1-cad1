@@ -1,18 +1,21 @@
 'use strict';
 
-import logger from "../utils/logger.js";
-import playlistStore from "../models/playlist-store.js";
+import logger from '../utils/logger.js';
+import phoneStore from '../models/phone-store.js';
+import accounts from './accounts.js';
 
 const dashboard = {
     createView(request, response) {
-        logger.info("Dashboard page loading!");
+        logger.info('Dashboard page loading!');
+
+        const loggedInUser = accounts.getCurrentUser(request);
+        if (!loggedInUser) return response.redirect('/');
 
         const viewData = {
-            title: "Phone Ranking Informationd",
-            playlists: playlistStore.getAllPlaylists()
+            title: 'Phones Dashboard',
+            fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+            playlists: phoneStore.getAllPlaylists(),
         };
-
-        logger.debug(viewData.playlists);
 
         response.render('dashboard', viewData);
     },

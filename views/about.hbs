@@ -14,21 +14,34 @@
                     <img src="{{image}}">
                 </div>
                 <div class="content">
-                    <a class="header"> {{fullname}} </a>
+                    <a class="header"> {{modelname}} </a>
                     <div class="meta">
-                        <span class="date">Joined in {{joined}}  </span>
+                        <span class="date">Released in {{released}}</span>
                     </div>
                     <div class="description">
-                        {{name}}    is an {{job}}  made in  {{city}}  .
+                        {{brand}} — {{description}} — Made in {{country}}
                     </div>
                 </div>
                 <div class="extra content">
                     <a>
-                        <i class="user icon"></i>
-                        {{mates}}  contacts
+                        <i class="star icon"></i>
+                        Rating: {{rating}}
                     </a>
                 </div>
             </div>
         {{/each}}
     </div>
+
+</section>
+
+<section class="ui center aligned middle aligned segment">
+    <h2>Our Location</h2>
+    <p>Based in Waterford, Ireland.</p>
+    <iframe
+            title="Waterford Map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-7.12,52.24,-7.08,52.27&layer=mapnik&marker=52.2583,-7.1102"
+            style="border:0; width:100%; height:380px;"
+            allowfullscreen
+            loading="lazy">
+    </iframe>
 </section>

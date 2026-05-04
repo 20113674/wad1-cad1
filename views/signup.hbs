@@ -1,0 +1,30 @@
+{{> welcomemenu id="signup"}}
+
+<section class="ui center aligned segment" style="max-width: 500px; margin: 2em auto;">
+    {{#if error}}
+        <div class="ui red message">{{error}}</div>
+    {{/if}}
+    <form class="ui stacked form" action="/register" method="POST">
+        <h3 class="ui header">Create Account</h3>
+        <div class="two fields">
+            <div class="field">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="First Name" required autofocus>
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="field">
+            <label>Password <small>(min. 5 characters)</small></label>
+            <input type="password" name="password" required>
+        </div>
+        <button class="ui fluid teal button">Register</button>
+    </form>
+    <p style="margin-top:1em;">Already have an account? <a href="/login">Log in</a></p>
+</section>

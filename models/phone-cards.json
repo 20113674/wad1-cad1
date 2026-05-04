@@ -1,0 +1,31 @@
+{
+  "phoneCards": [
+    {
+      "brand": "Samsung",
+      "modelname": "Samsung Galaxy S26 Ultra",
+      "image": "/download.jpg",
+      "released": 2026,
+      "description": "Most Expensive Phone in the World of 2026",
+      "country": "South Korea",
+      "rating": 41
+    },
+    {
+      "brand": "Apple",
+      "modelname": "Apple iPhone 17 Pro Max",
+      "image": "/iphone17.jpg",
+      "released": 2025,
+      "description": "Best Camera Phone of 2025",
+      "country": "United States",
+      "rating": 28
+    },
+    {
+      "brand": "Oppo",
+      "modelname": "Oppo Find X8 Pro",
+      "image": "/oppo.jpg",
+      "released": 2024,
+      "description": "Best Value Flagship Phone",
+      "country": "China",
+      "rating": 19
+    }
+  ]
+}

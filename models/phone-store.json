@@ -1,86 +1,86 @@
 {
-  "playlistCollection": [
+  "phoneCollection": [
     {
       "id": "01",
       "title": "Best Flagship Phones",
-      "songs": [
+      "phones": [
         {
           "id": "04",
           "title": "Samsung Galaxy S25 Ultra",
-          "artist": "Samsung"
+          "brand": "Samsung"
         },
         {
           "id": "05",
           "title": "iPhone 16 Pro Max",
-          "artist": "Apple"
+          "brand": "Apple"
         },
         {
           "id": "06",
           "title": "Google Pixel 9 Pro",
-          "artist": "Google"
+          "brand": "Google"
         }
       ]
     },
     {
       "id": "02",
       "title": "Best Camera Phones",
-      "songs": [
+      "phones": [
         {
           "id": "07",
           "title": "iPhone 16 Pro Max",
-          "artist": "Apple"
+          "brand": "Apple"
         },
         {
           "id": "08",
           "title": "Samsung Galaxy S25 Ultra",
-          "artist": "Samsung"
+          "brand": "Samsung"
         },
         {
           "id": "09",
           "title": "Google Pixel 9 Pro",
-          "artist": "Google"
+          "brand": "Google"
         }
       ]
     },
     {
       "id": "03",
       "title": "Best Battery Life",
-      "songs": [
+      "phones": [
         {
           "id": "10",
           "title": "Samsung Galaxy S25+",
-          "artist": "Samsung"
+          "brand": "Samsung"
         },
         {
           "id": "11",
           "title": "OnePlus 13",
-          "artist": "OnePlus"
+          "brand": "OnePlus"
         },
         {
           "id": "12",
           "title": "Motorola Edge 50 Ultra",
-          "artist": "Motorola"
+          "brand": "Motorola"
         }
       ]
     },
     {
       "id": "04",
       "title": "Best Performance Phones",
-      "songs": [
+      "phones": [
         {
           "id": "13",
           "title": "iPhone 16 Pro Max",
-          "artist": "Apple"
+          "brand": "Apple"
         },
         {
           "id": "14",
           "title": "Samsung Galaxy S25 Ultra",
-          "artist": "Samsung"
+          "brand": "Samsung"
         },
         {
           "id": "15",
           "title": "OnePlus 13",
-          "artist": "OnePlus"
+          "brand": "OnePlus"
         }
       ]
     }

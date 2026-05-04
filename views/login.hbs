@@ -1,0 +1,20 @@
+{{> welcomemenu id="login"}}
+
+<section class="ui center aligned segment" style="max-width: 450px; margin: 2em auto;">
+    {{#if error}}
+        <div class="ui red message">{{error}}</div>
+    {{/if}}
+    <form class="ui stacked form" action="/authenticate" method="POST">
+        <h3 class="ui header">Log In</h3>
+        <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Email" required autofocus>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <button class="ui fluid blue button">Login</button>
+    </form>
+    <p style="margin-top:1em;">No account? <a href="/signup">Sign up here</a></p>
+</section>

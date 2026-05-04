@@ -1,19 +1,45 @@
 'use strict';
 
 import express from 'express';
-import routes from "./routes.js";
-import logger from "./utils/logger.js";
+import logger from './utils/logger.js';
+import routes from './routes.js';
 import { create } from 'express-handlebars';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
+import fileUpload from 'express-fileupload';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.use(express.static("public"));
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(fileUpload({ useTempFiles: true, tempFileDir: './tmp/' }));
 
-const handlebars = create({extname: '.hbs'});
-app.engine(".hbs", handlebars.engine);
-app.set("view engine", ".hbs");
+const handlebars = create({
+    extname: '.hbs',
+    helpers: {
+        uppercase: (str) => str.toUpperCase(),
 
-app.use("/", routes);
+        formatDate: (date) => {
+            const d = new Date(date);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: '2-digit' };
+            return d.toLocaleDateString('en-IE', options);
+        },
 
-app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
+        popularCategory: (count) => {
+            return count >= 3 ? '🔥 Popular' : '';
+        },
+
+        formatPrice: (price) => {
+            return price ? `€${parseFloat(price).toFixed(2)}` : 'N/A';
+        },
+    },
+});
+
+app.engine('.hbs', handlebars.engine);
+app.set('view engine', '.hbs');
+
+app.use('/', routes);
+
+app.listen(port, () => logger.info(`Phone Tracker listening on port ${port}`));

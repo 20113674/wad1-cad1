@@ -1,18 +1,22 @@
 'use strict';
 
-import logger from "../utils/logger.js";
-import appStore from "../models/app-store.js";
+import logger from '../utils/logger.js';
+import appStore from '../models/app-store.js';
+import accounts from './accounts.js';
 
 const start = {
   createView(request, response) {
-    logger.info("Start page loading!");
+    logger.info('Start page loading!');
+
+    const loggedInUser = accounts.getCurrentUser(request);
+    if (!loggedInUser) return response.redirect('/');
 
     const viewData = {
-      title: "Welcome to the Phone Ranking Information !",
-      info: appStore.getAppInfo()
+      title: 'Welcome to Phone Tracker!',
+      info: appStore.getAppInfo(),
+      fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
     };
 
-    //logger.debug(viewData);
     response.render('start', viewData);
   },
 };

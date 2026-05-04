@@ -1,26 +1,25 @@
 'use strict';
 
 import logger from '../utils/logger.js';
+import phoneStore from '../models/phone-store.js';
 import accounts from './accounts.js';
-import appStore from '../models/app-store.js';
-import phoneCards from '../models/phone-cards.js';
 
-const about = {
+const category = {
     createView(request, response) {
-        logger.info('About page loading!');
-
         const loggedInUser = accounts.getCurrentUser(request);
         if (!loggedInUser) return response.redirect('/');
 
+        const phoneId = request.params.id;
+        logger.debug(`Category id = ${phoneId}`);
+
         const viewData = {
-            title: 'About Phone Tracker',
+            title: 'Phone Category',
             fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
-            info: appStore.getAppInfo(),
-            employees: phoneCards.getAppInfo(),
+            singlePlaylist: phoneStore.getPlaylist(phoneId),
         };
 
-        response.render('about', viewData);
+        response.render('category', viewData);
     },
 };
 
-export default about;
+export default category;

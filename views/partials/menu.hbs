@@ -1,12 +1,17 @@
 <nav class="ui stackable menu">
-    <header class="ui header item"> <a href="/"> Phone Tracker </a></header>
+    <header class="ui header item"><a href="/start"> Phone Tracker </a></header>
     <div class="right menu">
+        {{#if fullname}}
+            <span class="item" style="color: #555; font-style: italic;">👤 {{fullname}}</span>
+        {{/if}}
+        <a id="start"     class="item" href="/start">     Home       </a>
         <a id="dashboard" class="item" href="/dashboard"> Dashboard  </a>
-        <a id="about"  class ="item" href="about"> About </a>
+        <a id="about"     class="item" href="/about">     About      </a>
+        <a id="logout"    class="item" href="/logout">    Logout     </a>
     </div>
 </nav>
 
 <script>
-    document.querySelector("#{{id}}") && document.querySelector("#{{id}}").classList.add("active");
-
+    const el = document.querySelector("#{{id}}");
+    if (el) el.classList.add("active");
 </script>
